@@ -12,8 +12,13 @@ if (getComputerChoice === 1) {
     console.log("There is a problem!");
 }
 
+function capitalizeFirstLetter(string) {
+    const decapitalizeAllLetter = string.toLowerCase();
+    return decapitalizeAllLetter.charAt(0).toUpperCase() + decapitalizeAllLetter.slice(1);
+}
+
 const computerSelection = getComputerChoice;
-const playerSelection = getUserChoice;
+const playerSelection = capitalizeFirstLetter(getUserChoice);
 
 function playRound(playerSelection, computerSelection) {
     if (computerSelection === 1 && playerSelection === "Rock") {
@@ -40,3 +45,4 @@ function playRound(playerSelection, computerSelection) {
 }
 
 playRound(playerSelection, getComputerChoice)
+
