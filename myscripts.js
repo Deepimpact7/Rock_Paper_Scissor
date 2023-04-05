@@ -1,5 +1,5 @@
-const getComputerChoice = Math.floor(Math.random() * 3) + 1;
-const getUserChoice = prompt("Choose between Rock, Paper, Scissors");
+let getComputerChoice = Math.floor(Math.random() * 3) + 1;
+let getUserChoice = prompt("Choose between Rock, Paper, Scissors");
 console.log("User = " + getUserChoice)
 
 if (getComputerChoice === 1) {
@@ -17,8 +17,8 @@ function capitalizeFirstLetter(string) {
     return decapitalizeAllLetter.charAt(0).toUpperCase() + decapitalizeAllLetter.slice(1);
 }
 
-const computerSelection = getComputerChoice;
-const playerSelection = capitalizeFirstLetter(getUserChoice);
+let computerSelection = getComputerChoice;
+let playerSelection = capitalizeFirstLetter(getUserChoice);
 
 function playRound(playerSelection, computerSelection) {
     if (computerSelection === 1 && playerSelection === "Rock") {
@@ -44,5 +44,4 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-playRound(playerSelection, getComputerChoice)
-
+playRound(playerSelection, getComputerChoice);
